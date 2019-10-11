@@ -1,0 +1,169 @@
+/*
+    File: /~fpatel/assignment_3/pacific.css
+    COMP 4610 Assignment: Assignment 3 - Style a Site with External CSS
+    Fenim Patel a Computer Science student at UMass Lowell in course COMP 4610 GUI Programming I
+    Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+    Created: September 26, 2019 at 8:30 PM by Fenim Patel
+    Copyright (c) 2019 by Fenim Patel. All rights reserved. May be freely copied
+    or excerpted for educational purposes with credit to the author
+    Updated: October 1, 2019 at 7:15 PM by Fenim Patel
+    Description: I had to modify pacific.css file to make a webpage that looks like the one shown
+		in Assignment3.pdf without modifying index.html
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+header {
+	  background-color: rgb(0, 0, 50); /* background color is specified to rgb(0, 0, 50). I used https://www.w3schools.com/css/css_background.asp as a reference to help me with background properties */
+	  background-image: url("sunset.jpg"); /* background image is accessed from url "sunset.jpg" */
+	  background-position: right; /* background position is set to right */
+	  background-repeat: no-repeat; /* background image has no repeat */
+	  color: #FFFFFF;
+}
+
+body {
+	  background-color: rgb(0, 86, 159); /* background color is set to rgb(0, 86, 159) */
+	  background-image: url("ptrbackground.jpg"); /* background image is accessed from url "ptrbackground.jpg" */
+	  background-position: left top; /* background position is set to left top */
+	  background-repeat: repeat-x; /* repeat background image only horizontally */
+	  color: #666666;
+	  font-family: Arial, Helvetica, sans-serif;
+	  margin-top: 20px;
+	  margin-right: 10px;
+	  margin-bottom: 70px;
+	  margin-left: 10px;
+}
+
+img {
+	  float: left; /* makes sure that img floats on left side */
+	  margin-top: 0;
+	  margin-right: 30px;
+	  margin-bottom: 0;
+	  margin-left: 0;
+}
+
+nav {
+	  float: left; /* makes sure that nav floats on left side */
+	  width: 190px;
+}
+
+nav ul { /* makes sure that unordered list inside nav has list style type set to none and that there is no list style image */
+	  font-size: 1.2em;
+	  list-style-type: none; /* list style type has no type of list item marker. I used https://www.w3schools.com/cssref/pr_list-style.asp as a reference to help me with list-style properties */
+	  list-style-image: none; /* list style image has no url to an image as it is none */
+	  margin-top: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;
+	  margin-left: 0;
+	  padding-top: 20px;
+	  padding-right: 20px;
+	  padding-bottom: 20px;
+	  padding-left: 20px;
+}
+
+nav a {
+    color: #000033;
+	  font-weight: bold;
+	  text-decoration: none; /* decoration added to text is none */
+}
+
+nav a:visited {
+	  color: #344873;
+}
+
+nav a:hover {
+	  color: #FFFFFF;
+}
+
+h1 {
+	  margin-top: 0;
+    margin-right: 0;
+	  margin-bottom: 0;
+	  margin-left: 0;
+	  padding-top: 10px;
+	  padding-right: 10px;
+	  padding-bottom: 10px;
+	  padding-left: 10px;
+}
+
+h2 {
+	  color: #3399CC;
+	  margin-top: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;
+	  margin-left: 0;
+	  padding-top: 20px;
+	  padding-right: 0;
+	  padding-bottom: 20px;
+	  padding-left: 0;
+}
+
+h1,
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+ul { /* makes sure that unordered list will have list style position set to inside and list style image has an image which is accessed from url "marker.gif" */
+    margin-top: 20px;
+	  margin-right: 0;
+	  margin-bottom: 20px;
+  	margin-left: 40px;
+	  padding-top: 0;
+	  padding-right: 0;
+	  padding-bottom: 0;
+	  padding-left: 0;
+	  list-style-position: inside; /* list style position for marker is inside the list item */
+	  list-style-image: url("marker.gif"); /* list style image is accessed from url "marker.gif" */
+}
+
+#contact {
+	  font-size: 90%;
+}
+
+#content {
+	  background-color: rgb(255, 255, 255); /* background color is specified to rgb(255, 255, 255) */
+	  margin-top: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;
+	  margin-left: 190px;
+	  padding-top: 0;
+	  padding-right: 20px;
+	  padding-bottom: 15px;
+	  padding-left: 30px;
+}
+
+#wrapper { /* left margin and right margin are set to auto so that it appear in center on the page */
+	  background-color: rgb(144, 200, 226); /* background color is set to rgb(144, 200, 226) */
+	  margin-top: 0;
+	  margin-right: auto; /* makes sure that right side of margin is auto */
+	  margin-bottom: 0;
+	  margin-left: auto; /* make sure that left side of margin is auto */
+	  width: 90%;
+	  min-width: 600px; /* sets minimum width to 600px to prevent the value of width property from becoming smaller than min-width */
+}
+
+.resort {
+	  color: #5B7F9F;
+	  font-weight: bold;
+}
+
+dt {
+	  color: #000033;
+}
+
+footer {
+	  background-color: rgb(255, 255, 255); /* background color is specified to rgb(255, 255, 255) */
+	  font-family: Georgia, "Times New Roman", serif;
+	  font-size: 75%;
+	  font-style: italic;
+	  margin-top: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;
+  	margin-left: 190px;
+	  padding-top: 20px;
+	  padding-right: 20px;
+	  padding-bottom: 20px;
+	  padding-left: 20px;
+}
