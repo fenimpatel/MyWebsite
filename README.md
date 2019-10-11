@@ -1,2 +1,1 @@
-# MyWebsite
-Fenim Patel's website.
+Everything is in the gh-pages branch.
