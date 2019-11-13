@@ -1,0 +1,82 @@
+/*
+    File: https://fenimpatel.github.io/MyWebsite/style.css
+    COMP 4610 Assignment: Assignment 6 - Creating an Interactive Dynamic Table
+    Fenim Patel a Computer Science student at UMass Lowell in course COMP 4610 GUI Programming I
+    Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+    Created: November 7, 2019 at 9:15 PM by Fenim Patel
+    Copyright (c) 2019 by Fenim Patel. All rights reserved. May be freely copied
+    or excerpted for educational purposes with credit to the author
+    Updated: November 13, 2019 at 10:05 AM by Fenim Patel
+    Description: I added my style.css to GitHub Pages
+*/
+
+html {
+    background-image: url("../images/background.jpg"); /* background image is accessed from url "../images/background.jpg" */
+    background-repeat: repeat; /* repeats background image horizontally and vertically */
+}
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-color: rgb(75, 75, 75);
+    min-width: 680px; /* minimum width is 680px so that if content is larger than minimum width then min-width property will not be applied and if content is smaller than minimum width then min-width property will be applied */
+    max-width: 950px; /* maximum width is 950px so that if content is larger than maximum width then it will automatically change the height of element and if content is smaller than maximum then max-width property will not be applied */
+    margin-top: 0px; /* top margin will be set to 0px to start at very top of the page */
+    margin-right: 190px; /* right margin will be set to 190px so that there is 190px between right side of body and very right side of the page */
+    margin-bottom: 0px; /* bottom margin will be set to 0px to end at very bottom of the page */
+    margin-left: 368px; /* left margin will be set to 368px so that body is on the right side of navigation bar */
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav {
+	  float: left; /* makes sure that nav floats on left side */
+	  width: 190px; /* makes sure that width of nav is 190px */
+}
+
+nav ul { /* makes sure that unordered list inside nav has list style type set to none. And I  used https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed as a reference to help me place navigation bar on left side */
+    background-color: rgb(50, 50, 50);
+    height: 100%; /* height is set to 100 percent so that navigation bar is of full height */
+    position: fixed; /* position is fixed so that it stays in one place */
+    top: 0px; /* makes sure that navigation bar starts from top edge of 0px  */
+    left: 190px; /* makes sure that navigation bar starts from left edge of 190px */
+    font-size: 1.2em;
+	  list-style-type: none; /* list style type has no type of list item marker */
+	  margin-top: 0;
+	  margin-right: 0;
+	  margin-bottom: 0;
+	  margin-left: 0;
+	  padding-top: 20px;
+	  padding-right: 20px;
+	  padding-bottom: 20px;
+	  padding-left: 20px;
+}
+
+.active {
+    color: #5A5A5A;
+}
+
+nav a {
+    color: #000000;
+	  font-weight: bold;
+	  text-decoration: none; /* decoration added to text is none */
+}
+
+nav a:hover {
+	  color: #FFFFFF;
+}
+
+h2 {
+    border-bottom: 1px solid #000000; /* border bottom side of header 2 will have solid border line of 1px with color value of #000000 */
+}
+
+h4 {
+    font-style: italic; /* header 4 will have italic style */
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 1px solid #000000; /* border top side of footer will have solid border line of 1px with color value of #000000 */
+    text-align: center; /* aligns the text in footer to center */
+}
