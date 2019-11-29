@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+    File: https://fenimpatel.github.io/MyWebsite/assignment_7/index.html
+    COMP 4610 Assignment: Assignment 7 - Using the jQuery Validation Plugin with Your Dynamic Table
+    Fenim Patel a Computer Science student at UMass Lowell in course COMP 4610 GUI Programming I
+    Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+    Created: November 23, 2019 at 11:00 AM by Fenim Patel
+    Copyright (c) 2019 by Fenim Patel. All rights reserved. May be freely copied
+    or excerpted for educational purposes with credit to the author
+    Updated: November 29, 2019 at 9:10 AM by Fenim Patel
+    Description: index.html file extends the index.html file from assignment 6 so that assignment 7 uses jQuery and jQuery
+    Validation Plugin. index.html is a structure for a webpage which creates a multiplication table using javascript and the
+    webpage is styled with CSS. And to create a multiplication table, the user is asked to enter starting number which is a
+    minimum number and ending number which is a maximum number for multiplier and multiplicand through HTML form.
+-->
+
+<html lang="en">
+    <head>
+        <title>Assignment 7</title>
+        <meta charset="utf-8">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- I used https://www.w3schools.com/jquery/jquery_get_started.asp to help me with using jQuery -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script> <!-- I used https://jqueryvalidation.org/ to help me with using jQuery Validation plugin -->
+        <script src="js/hw7javascript.js"></script>
+    </head>
+
+    <body>
+        <h1>Assignment 7: Using the jQuery Validation Plugin with Your Dynamic Table</h1>
+        <p>Enter a starting number which is a minimum value and an ending number which is a maximum value
+           for both horizontal (multiplier) and vertical (multiplicand)
+        </p>
+
+        <!-- form tag with an id of "formForMultiplicationTable" and I used https://www.w3schools.com/tags/tag_fieldset.asp and https://www.w3schools.com/tags/att_form_novalidate.asp as a reference to help me with form -->
+        <form id="formForMultiplicationTable" nonvalidate>
+            <fieldset> <!-- fieldset is used to group related elements in a form -->
+                <legend>Horizontal (Multiplier)</legend>
+                <div>
+                    <label for="startingValueForMultiplier">Starting Multiplier</label>
+                    <input id="startingValueForMultiplier" type="number" name="startingValueForMultiplier" autocomplete="off"> <!-- startingValueForMultiplier input textbox is a number and autocomplete is off -->
+                </div>
+                <div>
+                    <label for="endingValueForMultiplier">Ending Multiplier</label>
+                    <input id="endingValueForMultiplier" type="number" name="endingValueForMultiplier" autocomplete="off"> <!-- endingValueForMultiplier input textbox is a number and autocomplete is off -->
+                </div>
+            </fieldset>
+            <fieldset> <!-- fieldset is used to group related elements in a form -->
+                <legend>Vertical (Multiplicand)</legend>
+                <div>
+                    <label for="startingValueForMultiplicand">Starting Multiplicand</label>
+                    <input id="startingValueForMultiplicand" type="number" name="startingValueForMultiplicand" autocomplete="off"> <!-- startingValueForMultiplicand input textbox is a number and autocomplete is off -->
+                </div>
+                <div>
+                    <label for="endingValueForMultiplicand">Ending Multiplicand</label>
+                    <input id="endingValueForMultiplicand" type="number" name="endingValueForMultiplicand" autocomplete="off"> <!-- endingValueForMultiplicand input textbox is a number and autocomplete is off -->
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit"> <!-- "Submit" is defined as a button for submitting the form data -->
+        </form>
+    </body>
+</html>

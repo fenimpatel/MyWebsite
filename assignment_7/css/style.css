@@ -1,0 +1,153 @@
+/*
+    File: https://fenimpatel.github.io/MyWebsite/assignment_7/css/style.css
+    COMP 4610 Assignment: Assignment 7 - Using the jQuery Validation Plugin with Your Dynamic Table
+    Fenim Patel a Computer Science student at UMass Lowell in course COMP 4610 GUI Programming I
+    Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+    Created: November 23, 2019 at 1:00 PM by Fenim Patel
+    Copyright (c) 2019 by Fenim Patel. All rights reserved. May be freely copied
+    or excerpted for educational purposes with credit to the author
+    Updated: November 29, 2019 at 9:10 AM by Fenim Patel
+    Description: style.css file is to style the webpage for creating a multiplication table which uses jQuery and jQuery Validation Plugin.
+*/
+
+html {
+    font-style: normal;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    background-image: url("../images/background.jpg"); /* background image is accessed form url "../images/background.jpg" */
+    background-repeat: repeat; /* repeats background image horizontally and vertically */
+    height: 100%;
+}
+
+body {
+    font-style: normal;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: rgb(75, 75, 75);
+    color: #000000;
+    /* minimum width is 680px so that if content is larger than minimum width then minimum width property will
+    not be applied and if content is smaller than minimum width then minimum width property will be applied */
+    min-width: 680px;
+    /* maximum width is 950px so that if content is larger than maximum width then it will automatically change
+    the height of element and if content is smaller than maximum width property then maximum width property will not be applied */
+    max-width: 950px;
+    margin-top: 0px;
+    margin-right: 190px;
+    margin-bottom: 0px;
+    margin-left: 190px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    min-height: 100%; /* minimum height is set to 100 percent so that body has full height */
+}
+
+h1 {
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+
+p {
+    font-size: 22px;
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+
+#formForMultiplicationTable fieldset {
+    border-style: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+
+#formForMultiplicationTable legend {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#formForMultiplicationTable label {
+    width: 210px; /* label type has width of 210px so that the input box is aligned properly */
+    display: inline-block; /* inline-block makes sure that top and bottom margins/paddings are respected and does not add a line-break after the element */
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+}
+
+#formForMultiplicationTable input[type='submit'] {
+    background-color: rgb(50, 50, 50);
+    color: #008000;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+}
+
+#formForMultiplicationTable input[type='submit']:hover {
+    color: #87CEFA;
+}
+
+.error {
+    text-align: center; /* jQuery plugin's error will have text align set to center */
+    color: #FF0000; /* jQuery plugin's error will have color set to #FF0000 which is red color  */
+}
+
+#multiplicationTable {
+    display: block; /* multiplicationTable display behavior is set to block */
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    /* multiplicationTable maximum height is 272px so that if content is larger than maximum height then it will overflow
+    and if content is smaller than maximum height property then max height property will not have an effect */
+    max-height: 272px;
+    overflow: auto; /* multiplicationTable overflow is set to auto so that scrollbar is added when necessary */
+    text-align: center; /* multiplicationTable text is aligned in center */
+    font-weight: bold;
+    width: 100%;
+}
+
+#multiplicationTable th {
+    background-color: rgb(50, 50, 50);
+    color: #87CEFA;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(0, 0, 0);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+}
+
+#multiplicationTable td {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(0, 0, 0);
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+}
+
+#multiplicationTable tr:nth-child(2n+1) td:nth-child(2n) {
+    background-color: rgb(0, 128, 0); /* background color is set to rgb(0, 128, 0) which is a green color for cell which is odd column and even row */
+}
+
+#multiplicationTable tr:nth-child(2n) td:nth-child(2n+1) {
+    background-color: rgb(0, 128, 0); /* background color is set to rgb(0, 128, 0) which is a green color for cell which is even column and odd row */
+}
