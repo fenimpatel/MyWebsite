@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    File: https://fenimpatel.github.io/MyWebsite/assignment_8/index.html
+    COMP 4610 Assignment: Assignment 8 - Using the jQuery UI Slider and Tab Widgets
+    Fenim Patel a Computer Science student at UMass Lowell in course COMP 4610 GUI Programming I
+    Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+    Created: December 2, 2019 at 9:00 AM by Fenim Patel
+    Copyright (c) 2019 by Fenim Patel. All rights reserved. May be freely copied
+    or excerpted for educational purposes with credit to the author
+    Updated: December 9, 2019 at 4:20 PM by Fenim Patel
+    Description: index.html file extends the index.html file from assignment 7 so that assignment 8 uses jQuery UI Slider and Tab Widgets. index.html
+    is a structure for a webpage which creates a multiplication table using javascript and jQuery, and the webpage is styled with CSS. And to
+    create a multiplication table, the user is asked to enter or slide the slider for starting number which is a minimum number and ending number
+    which is a maximum number for multiplier and multiplicand through HTML form and the multiplication table is displayed in tab.
+-->
+
+<html lang="en">
+    <head>
+        <title>Assignment 8</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>Assignment 8: Using the jQuery UI Slider and Tab Widgets</h1>
+        <p>Enter or slide the slider for a starting number which is a minimum value and an ending number which is a maximum value
+           for both horizontal (multiplier) and vertical (multiplicand)
+        </p>
+
+        <!-- form tag with an id of "formForMultiplicationTable" and I used https://www.w3schools.com/tags/tag_fieldset.asp and https://www.w3schools.com/tags/att_form_novalidate.asp as a reference to help me with form -->
+        <form id="formForMultiplicationTable" novalidate>
+            <fieldset> <!-- fieldset is used to group related elements in a form -->
+                <legend>Horizontal (Multiplier)</legend>
+                <div>
+                    <label for="startingValueForMultiplier">Starting Multiplier</label>
+                    <input id="startingValueForMultiplier" name="startingValueForMultiplier" type="number" min="-100" max="100" value="0" autocomplete="off">
+                    <div id="startingValueForMultiplierSlider" class="slider"></div>
+                </div>
+                <div>
+                    <label for="endingValueForMultiplier">Ending Multiplier</label>
+                    <input id="endingValueForMultiplier" name="endingValueForMultiplier" type="number" min="-100" max="100" value="0" autocomplete="off">
+                    <div id="endingValueForMultiplierSlider" class="slider"></div>
+                </div>
+            </fieldset>
+            <div id="errorForMultiplier" class="hiddenError"></div>
+
+            <fieldset> <!-- fieldset is used to group related elements in a form -->
+                <legend>Vertical (Multiplicand)</legend>
+                <div>
+                    <label for="startingValueForMultiplicand">Starting Multiplicand</label>
+                    <input id="startingValueForMultiplicand" name="startingValueForMultiplicand" type="number" min="-100" max="100" value="0" autocomplete="off">
+                    <div id="startingValueForMultiplicandSlider" class="slider"></div>
+                </div>
+                <div>
+                    <label for="endingValueForMultiplicand">Ending Multiplicand</label>
+                    <input id="endingValueForMultiplicand" name="endingValueForMultiplicand" type="number" min="-100" max="100" value="0" autocomplete="off">
+                    <div id="endingValueForMultiplicandSlider" class="slider"></div>
+                </div>
+            </fieldset>
+            <div id="errorForMultiplicand" class="hiddenError"></div>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- buttons for removing tabs -->
+        <fieldset id="removingAllTabs" class="hide">
+            <legend>Option for removing tabs</legend>
+            <input id="removeAllOfTheTabs" type="button" value="All of the tabs">
+        </fieldset>
+
+        <!-- tabbed table section -->
+        <div id="tabbedTable" class="hide">
+            <ul></ul>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="js/hw8javascript.js"></script>
+    </body>
+</html>
