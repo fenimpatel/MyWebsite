@@ -1,0 +1,322 @@
+/*
+    File: https://fenimpatel.github.io/MyWebsite/assignment_9/css/style.css
+    COMP 4610 Assignment: Assignment 9 - Implementing a Bit of Scrabble with Drag-and-Drop
+    Fenim Patel a Computer Science student at UMass Lowell in course COMP 4610 GUI Programming I
+    Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+    Created: December 11, 2019 at 10:00 AM by Fenim Patel
+    Copyright (c) 2019 by Fenim Patel. All rights reserved. May be freely copied
+    or excerpted for educational purposes with credit to the author
+    Updated: December 21, 2019 at 11:00 PM by Fenim Patel
+    Description: style.css file is to style the webpage for implementing a bit of scrabble with drag-and-drop using jQuery UI
+*/
+
+html {
+    font-style: normal;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    background-image: url("../images/background.jpg"); /* background image is accessed form url "../images/background.jpg" */
+    background-repeat: repeat; /* repeats background image horizontally and vertically */
+    height: 100%;
+}
+
+body {
+    font-style: normal;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: rgb(75, 75, 75);
+    color: #000000;
+    /* minimum width is 680px so that if content is larger than minimum width then minimum width property will
+    not be applied and if content is smaller than minimum width then minimum width property will be applied */
+    min-width: 680px;
+    /* maximum width is 950px so that if content is larger than maximum width then it will automatically change
+    the height of element and if content is smaller than maximum width property then maximum width property will not be applied */
+    max-width: 950px;
+    margin-top: 0px;
+    margin-right: 190px;
+    margin-bottom: 0px;
+    margin-left: 190px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    min-height: 100%; /* minimum height is set to 100 percent so that body has full height */
+}
+
+h1 {
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+
+td {
+    background-color: rgb(217, 182, 137);
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    width: 46px;
+    height: 46px;
+}
+
+td img { /* decoration for scrabble board tile image */
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    display:block;
+    width: 100%;
+    height: 46px;
+}
+
+.scrabbleBoardSection {
+    display: table;
+}
+
+.errorMessage { /* decoration for displaying error message */
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    font-size: 18px;
+    color: #FF0000;
+    text-align: center;
+    height: 25px;
+}
+
+.leftword {
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.RowWord {
+    text-align: center;
+    width: 36px;
+    height: 36px;
+}
+
+.left_side { /* decoration for score */
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+    margin-left: 65px; /* to place score on left side */
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+}
+
+.right_side { /* decoration for submit */
+    margin-top: 1px;
+    margin-right: 57px; /* to place submit on right side */
+    margin-bottom: 2px;
+    margin-left: 0px;
+    float: right;
+}
+
+.twoTimesTheWord { /* decoration for the three times the value of word bonus square multiplier on the scrabble board */
+    background-size: 100% 100%;
+    background-image: url("../images/scrabble/Two_Times_Word.png");
+    background-repeat: no-repeat;
+}
+
+.threeTimesTheWord { /* decoration for the three times the value of word bonus square multiplier on the scrabble board */
+    background-size: 100% 100%;
+    background-image: url("../images/scrabble/Three_Times_Word.png");
+    background-repeat: no-repeat;
+}
+
+.twoTimesTheLetter { /* decoration for the two times the value of letter bonus square multiplier on the scrabble board */
+    background-image: url("../images/scrabble/Two_Times_Letter.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.threeTimesTheLetter { /* decoration for the three times the value of letter bonus square multiplier on the scrabble board */
+    background-size: 100% 100%;
+    background-image: url("../images/scrabble/Three_Times_Letter.png");
+    background-repeat: no-repeat;
+}
+
+.Star { /* decoration for the start in middle of the scrabble board */
+    background-size: 100% 100%;
+    background-image: url("../images/scrabble/Star.png");
+    background-repeat: no-repeat;
+}
+
+#main {
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    display: table;
+    position: relative;
+    height: 100%;
+}
+
+#scrabbleGameInformation {
+    height: 208px; /* to have all of the information on right side in the height described */
+}
+
+#rightSection {
+    float: right;
+    width: 35%;
+}
+
+#rackOfLetters {
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    position: relative;
+    height: 58px;
+}
+
+#rackOfLetters img { /* decoration for letter tile image */
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+}
+
+#rackOfWord td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    width: 46px;
+    height: 46px;
+}
+
+#rackOfWord img { /* decoration for place on the right side where letter images are placed */
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    display: block;
+    width: 100%;
+    height: 46px;
+}
+
+#resetScrabbleGameAndExchangeLettersSection { /* section that contains reset scrabble game and exchange letters button */
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 54px;
+}
+
+#resetScrabbleGame { /* decoration for reset scrabble game button */
+    background-color: rgb(50, 50, 50);
+    color: #0000FF;
+    margin-top: 2px;
+    margin-right: 0px;
+    margin-bottom:2px;
+    margin-left: 0px;
+    font-size: 12px;
+    width: 135px;
+    height: 50px;
+}
+
+#resetScrabbleGame:hover { /* decoration for reset scrabble game button when hover */
+    color: #87CEFA;
+}
+
+#exchangeLetters { /* for exchange letters button */
+    background-color: rgb(50, 50, 50);
+    color: #0000FF;
+    margin-top: 2px;
+    margin-right: 8px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    font-size: 12px;
+    width: 110px;
+    height: 50px;
+}
+
+#exchangeLetters:hover { /* decoration for exchange letters button when hover */
+    color: #87CEFA;
+}
+
+#putLetterBackOnRackAndClearScrabbleBoardSection { /* section that contains put letters back on rack button and clear scrabble board button */
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+    height: 55px;
+}
+
+#clearScrabbleBoard { /* decoration for clear scrabble board button */
+    background-color: rgb(50, 50, 50);
+    color: #0000FF;
+    margin-top: 2px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    font-size: 12px;
+    width: 130px;
+    height: 50px;
+}
+
+#clearScrabbleBoard:hover { /* decoration for clear scrabble board button when hover */
+    color: #87CEFA;
+}
+
+#putLetterBackOnRack { /* decoration for put letter back on rack button */
+    background-color: rgb(50, 50, 50);
+    color: #0000FF;
+    margin-top: 2px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    font-size: 12px;
+    width: 145px;
+    height: 50px;
+}
+
+#putLetterBackOnRack:hover { /* decoration for put letter back on rack when hover */
+    color: #87CEFA;
+}
+
+#tilesOnHand {
+    width: 100%;
+    height: 100%;
+}
+
+#scoreAndSubmitSection { /* section that contains score and submit button */
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+}
+
+#score { /* decoration for score */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#submit { /* decoration for submit button */
+    background-color: rgb(50, 50, 50);
+    color: #008000;
+    font-size: 12px;
+    width: 80px;
+    height: 35px;
+}
+
+#submit:hover { /* decoration for submit button when hover */
+    color: #87CEFA;
+}
+
+#valid {
+    border-color: green;
+}
+
+#letterImageIsValid {
+    border-color: green;
+}

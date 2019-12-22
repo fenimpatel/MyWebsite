@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+    File: https://fenimpatel.github.io/MyWebsite/assignment_9/index.html
+    COMP 4610 Assignment: Assignment 9 - Implementing a Bit of Scrabble with Drag-and-Drop
+    Fenim Patel a Computer Science student at UMass Lowell in course COMP 4610 GUI Programming I
+    Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+    Created: December 10, 2019 at 10:00 AM by Fenim Patel
+    Copyright (c) 2019 by Fenim Patel. All rights reserved. May be freely copied
+    or excerpted for educational purposes with credit to the author
+    Updated: December 21, 2019 at 11:00 PM by Fenim Patel
+    Description: index.html file is a structure for a webpage which implemnts a bit of scrabble with drag-and-drop using jQuery UI
+-->
+
+<html lang="en">
+    <head>
+        <title>Assignment 9</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>Assignment 9: Implementing a Bit of Scrabble with Drag-and-Drop</h1>
+        <!-- main section -->
+        <div id="main">
+
+            <!-- right side section -->
+            <div id="rightSection">
+                <br> </br>
+                <!-- information about the scrabble game section -->
+                <div id="scrabbleGameInformation">
+
+                    <!-- letters on rack section -->
+                    <div id="rackOfLetters"></div>
+
+                    <!-- section that has reset scrabble game button and exchange letters button -->
+                    <div id="resetScrabbleGameAndExchangeLettersSection">
+                        <input id="resetScrabbleGame" value="Reset Scrabble Game" type="submit">
+                        <input id="exchangeLetters" value="Exchange Letters" type="submit">
+                    </div>
+
+                    <!-- section that has put letter back on rack button and clear scrabble board button -->
+                    <div id="putLetterBackOnRackAndClearScrabbleBoardSection">
+                        <input id="putLetterBackOnRack" value="Put Letter Back On Rack" type="submit">
+                        <input id="clearScrabbleBoard" value="Clear Scrabble Board" type="submit">
+                    </div>
+
+                    <!-- section that has score and submit button -->
+                    <div id="scoreAndSubmitSection">
+                        <div class="left_side">
+                            Score: <span id="score"></span>
+                        </div>
+                        <div class="right_side">
+                            <input id="submit" value="Submit" type="submit">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- tiles on hand section -->
+                <div id="tilesOnHand"></div>
+
+            </div>
+
+            <!-- scrabble board section -->
+            <div class="scrabbleBoardSection">
+                <div class="errorMessage"></div>
+                <div class="scrabble"></div>
+                <div id="scrabbleBoardGame"></div>
+            </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="js/scrabblePieces.js"></script>
+        <script src="js/createScrabbleBoard.js"></script>
+        <script src="js/hw9javascript.js"></script>
+    </body>
+</html>

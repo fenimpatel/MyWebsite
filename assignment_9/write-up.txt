@@ -1,0 +1,34 @@
+Name: Fenim Patel
+Contact: fpatel@cs.uml.edu or fenim_patel@student.uml.edu
+Course: COMP 4610 GUI Programming I
+Date: 12/21/19
+
+My website address for Assignment 9: https://fenimpatel.github.io/MyWebsite/assignment_9/index.html or
+https://fenimpatel.github.io/MyWebsite/ then click on Assignment 9
+I implemented a bit of Scrabble with drag-and-drop using jQuery UI. I implemented fully working functionality
+of having letter tiles in the player's "hand" are selected randomly from an associative array data structure with
+the proper distribution of the letters by using Math.floor(Math.random() * SCRABBLELETTERS.length). I implemented
+fully working functionality of having letter tiles that can be dragged-and-dropped onto target Scrabble squares by
+creating a function that handles drag for dragging the letter tile using draggable function and a function that
+handles drop for dropping the letter tile using droppable function. I implemented fully working functionality of
+having program identify which letter tile is dropped onto which Scrabble square by checking which letter is dropped
+and if that letter is placed in a valid place and then by getting the information about letter, value, position,
+bonus square multiplier, and score. I implemented fully working functionality of having bonus squares on board by
+adding bonus square multipliers in their specific location when scrabble board is created. I implemented fully
+working score which is tallied correctly, including consideration of bonus square multipliers by calculating the
+score for normal tiles, as well as three times letter value, two times letter value, three times word, and two times
+word. I implemented fully working functionality of having any number of words that can be played until the player
+wishes to quit by allowing the Scrabble game to keep on playing and keeping on creating letters if the letters are
+finished and having a reset Scrabble game button to reset the game. I implemented partially working functionality
+of clearing the board after each round so that a new word can be played by having a clear Scrabble board button to
+clear the scrabble board manually, as my Scrabble board does not clear the board after each round by itself. I
+implemented fully working functionality of after playing a word, only the number of letter tiles needed to bring
+the player's "hand" back to 7 tiles are selected by finding out which letters are missing from the rack and then
+randomly selecting from an associative array data structure with the proper distribution of the letters with
+Math.floor(Math.random() * SCRABBLELETTERS.length) to receive new letters for the missing letters on the rack. I
+implemented partially working score that is kept for multiple words as my Scrabble game calculates the score of
+multiple words and updates the score, but the score for multiple words is not correct. I implemented fully working
+extra credit portion of multiple Scrabble board lines are implemented by adding multiple Scrabble game row with
+normal tiles and bonus square multiplier tiles. Also, I implemented fully working extra credit portion of full
+Scrabble board lines by adding all the Scrabble game row that are necessary for the whole Scrabble board game with
+normal tiles and bonus square multiplier tiles.
